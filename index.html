@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Таскер — задачи маленькой команды в одном списке</title>
+  <meta name="description" content="Таскер: учёт задач для команд до 30 человек. Спринты, роли, интеграции и тарифы с помесячной или годовой оплатой. 14 дней без карты.">
+  <meta property="og:title" content="Таскер — задачи маленькой команды">
+  <meta property="og:description" content="Список, спринт и договорённости в одном окне. Без доски на сорок колонок.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#17211B">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("tasker-theme");
+        if (saved === "dark" || saved === "light") document.documentElement.setAttribute("data-theme", saved);
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+  <header class="header">
+    <a class="logo" href="#top">Таскер</a>
+    <nav class="nav" id="nav">
+      <a href="#features">Возможности</a>
+      <a href="#how">Как работает</a>
+      <a href="#prices">Цены</a>
+      <a href="#faq">Вопросы</a>
+      <a class="nav-cta" href="#trial">Попробовать</a>
+    </nav>
+    <div class="tools">
+      <button class="theme" id="theme" type="button" aria-pressed="false">Тёмная</button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Для команд до 30 человек</p>
+        <h1>Задачи, которые не тонут в чате</h1>
+        <p class="lede">Таскер держит список, срок и ответственного в одном окне. Без колонок на весь монитор и без внедрения на квартал.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#trial">Попробовать бесплатно</a>
+          <a class="btn btn-ghost" href="#prices">Смотреть цены</a>
+        </div>
+        <p class="fine">14 дней на тарифе «Команда». Карта не нужна, письмо с доступом в этой версии не отправляется.</p>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="mock-top">
+          <span></span><span></span><span></span>
+          <b>Спринт 14</b>
+        </div>
+        <div class="mock-body">
+          <aside>
+            <p class="is-on">Спринт</p>
+            <p>Входящие</p>
+            <p>Бэклог</p>
+            <p>Готово</p>
+          </aside>
+          <div class="mock-main">
+            <p class="mock-title">6 из 11 закрыто</p>
+            <article>
+              <i></i>
+              <div><strong>Собрать отчёт по сменам</strong><em>Лера · до пятницы</em></div>
+            </article>
+            <article>
+              <i class="done"></i>
+              <div><strong>Починить фильтр в списке</strong><em>Глеб · готово</em></div>
+            </article>
+            <article>
+              <i></i>
+              <div><strong>Согласовать текст в письме</strong><em>Нина · сегодня</em></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos" aria-label="Команды, которые ведут задачи в Таскере">
+      <p>Уже ведут задачи</p>
+      <ul>
+        <li><svg viewBox="0 0 168 28" role="img" aria-label="Северная лавка"><rect width="14" height="14" y="6" rx="2" fill="currentColor"/><text x="20" y="19">Северная лавка</text></svg></li>
+        <li><svg viewBox="0 0 132 28" role="img" aria-label="Бюро Ноль"><circle cx="7" cy="14" r="7" fill="currentColor"/><text x="20" y="19">Бюро Ноль</text></svg></li>
+        <li><svg viewBox="0 0 84 28" role="img" aria-label="Поле"><rect width="14" height="14" y="6" fill="currentColor"/><text x="20" y="19">Поле</text></svg></li>
+        <li><svg viewBox="0 0 118 28" role="img" aria-label="Кит и Ко"><path d="M1 20 8 6l7 14" fill="none" stroke="currentColor" stroke-width="2"/><text x="22" y="19">Кит и Ко</text></svg></li>
+        <li><svg viewBox="0 0 96 28" role="img" aria-label="Цех 14"><rect width="14" height="14" x="0" y="6" rx="7" fill="currentColor"/><text x="20" y="19">Цех 14</text></svg></li>
+        <li><svg viewBox="0 0 84 28" role="img" aria-label="Река"><path d="M1 18c4-8 8-8 12 0s8 8 12 0" fill="none" stroke="currentColor" stroke-width="2"/><text x="32" y="19">Река</text></svg></li>
+      </ul>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head reveal">
+        <p class="eyebrow">Возможности</p>
+        <h2>Шесть вещей, ради которых его открывают</h2>
+      </div>
+      <div class="features">
+        <article class="feature reveal">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="7" width="20" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 16h12M10 20h8" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Один список</h3>
+          <p>Входящие, спринт и готовое. Не надо выбирать между пятью видами досок.</p>
+        </article>
+        <article class="feature reveal">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 11v6l4 2" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Срок виден сразу</h3>
+          <p>Просрочка подсвечивается в списке, а не в отдельном отчёте по понедельникам.</p>
+        </article>
+        <article class="feature reveal">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="12" cy="13" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="13" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 23c1.2-3 3.2-4 5-4s3.8 1 5 4M15 23c1-2.4 2.6-3.4 5-3.4 2.2 0 3.8.8 5 3.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Роли без путаницы</h3>
+          <p>Владелец, участник и гость. Гость видит только свой проект, не всю компанию.</p>
+        </article>
+        <article class="feature reveal">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 22V10h6l2 3h8v9H8z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Файлы рядом с задачей</h3>
+          <p>Макет, смета и переписка не живут в трёх разных ссылках.</p>
+        </article>
+        <article class="feature reveal">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 16h6l2-4 3 8 2-4h3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Короткий пульс недели</h3>
+          <p>В пятницу сервис собирает, что закрыто и что переехало. Без ручного статуса в чате.</p>
+        </article>
+        <article class="feature reveal">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="9" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 13h18" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Гостевая ссылка</h3>
+          <p>Подрядчик отмечает свои задачи и не видит зарплатные проекты соседней команды.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-head reveal">
+        <p class="eyebrow">Как это работает</p>
+        <h2>Три шага до первого спринта</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><strong>01</strong><h3>Создаёте пространство</h3><p>Название команды, три проекта максимум на старте. Лишние можно добавить позже.</p></li>
+        <li class="reveal"><strong>02</strong><h3>Переносите текущие дела</h3><p>Вставка из таблицы или почты. Таскер сам предлагает срок, если в тексте есть дата.</p></li>
+        <li class="reveal"><strong>03</strong><h3>Закрываете неделю</h3><p>В пятницу список «не успели» не теряется: задачи сами переезжают в следующий спринт.</p></li>
+      </ol>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="section-head reveal">
+        <p class="eyebrow">Цены</p>
+        <h2>Месяц или год, без скрытых мест</h2>
+        <p>Годовая оплата дешевле на 20%. Цена на карточке — за месяц, внизу видно, сколько выйдет за год.</p>
+      </div>
+      <div class="bill reveal" role="group" aria-label="Период оплаты">
+        <button type="button" data-bill="month" class="is-on" aria-pressed="true">Месяц</button>
+        <button type="button" data-bill="year" aria-pressed="false">Год −20%</button>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Старт</h3>
+          <p class="sum"><span data-price="start">490</span> ₽<small>/мес</small></p>
+          <p class="note" data-note="start">оплата помесячно</p>
+          <ul>
+            <li>До 5 человек</li>
+            <li>3 проекта</li>
+            <li>Гостевых ссылок нет</li>
+          </ul>
+        </article>
+        <article class="plan plan-hot reveal">
+          <p class="badge">Чаще берут</p>
+          <h3>Команда</h3>
+          <p class="sum"><span data-price="team">1 490</span> ₽<small>/мес</small></p>
+          <p class="note" data-note="team">оплата помесячно</p>
+          <ul>
+            <li>До 15 человек</li>
+            <li>Без лимита проектов</li>
+            <li>Пульс недели и гости</li>
+          </ul>
+        </article>
+        <article class="plan reveal">
+          <h3>Мастерская</h3>
+          <p class="sum"><span data-price="biz">3 990</span> ₽<small>/мес</small></p>
+          <p class="note" data-note="biz">оплата помесячно</p>
+          <ul>
+            <li>До 30 человек</li>
+            <li>Роли и журнал действий</li>
+            <li>Приоритет в поддержке</li>
+          </ul>
+        </article>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <caption>Сравнение тарифов</caption>
+          <thead>
+            <tr>
+              <th>Возможность</th>
+              <th>Старт</th>
+              <th>Команда</th>
+              <th>Мастерская</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Люди в пространстве</th><td>5</td><td>15</td><td>30</td></tr>
+            <tr><th>Проекты</th><td>3</td><td>без лимита</td><td>без лимита</td></tr>
+            <tr><th>Спринты</th><td>есть</td><td>есть</td><td>есть</td></tr>
+            <tr><th>Гостевая ссылка</th><td>нет</td><td>есть</td><td>есть</td></tr>
+            <tr><th>Пульс недели</th><td>нет</td><td>есть</td><td>есть</td></tr>
+            <tr><th>Журнал, кто что закрыл</th><td>нет</td><td>7 дней</td><td>180 дней</td></tr>
+            <tr><th>Выгрузка в таблицу</th><td>есть</td><td>есть</td><td>есть</td></tr>
+            <tr><th>Поддержка</th><td>почта</td><td>чат в будни</td><td>чат и созвон</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="integrations">
+      <div class="section-head reveal">
+        <p class="eyebrow">Интеграции</p>
+        <h2>Рядом с тем, где команда уже сидит</h2>
+      </div>
+      <ul class="integrations">
+        <li class="reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="8" width="22" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6 10 10 7L26 10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Почта</span></li>
+        <li class="reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="8" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 13h20M12 8v4" stroke="currentColor" stroke-width="1.6"/></svg><span>Календарь</span></li>
+        <li class="reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 10h16v10H12l-4 4v-4z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Рабочий чат</span></li>
+        <li class="reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="7" width="20" height="18" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 13h20M12 7v18M20 7v18" stroke="currentColor" stroke-width="1.6"/></svg><span>Таблицы</span></li>
+        <li class="reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 22V10h6l2 3h8v9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Файлы</span></li>
+        <li class="reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="8" cy="16" r="2.2" fill="currentColor"/><circle cx="24" cy="10" r="2.2" fill="currentColor"/><circle cx="24" cy="22" r="2.2" fill="currentColor"/><path d="M10 16h12M22 11.2 10.8 15M22 20.8 10.8 17" stroke="currentColor" stroke-width="1.4"/></svg><span>Вебхуки</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="section-head reveal">
+        <p class="eyebrow">Отзывы</p>
+        <h2>Как им пользуются</h2>
+      </div>
+      <div class="quotes">
+        <blockquote class="reveal"><p>Раньше статус собирали в чате по полчаса. Теперь пятничный пульс приходит сам, и планёрка начинается с него.</p><footer>Ольга Репина, студия «Поле»</footer></blockquote>
+        <blockquote class="reveal"><p>Подрядчик по текстам заходит по ссылке и не видит внутренние задачи найма. Это единственная причина, почему мы не вернулись в таблицу.</p><footer>Илья Корнев, «Кит и Ко»</footer></blockquote>
+        <blockquote class="reveal"><p>Переехали за вечер: вставили список из почты, сроки подставились. На второй неделе уже не искали, «а где та задача».</p><footer>Марат Юсупов, цех «Север»</footer></blockquote>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">Вопросы</p>
+        <h2>Перед пробным периодом</h2>
+      </div>
+      <div class="acc reveal" data-accordion>
+        <div class="acc-item">
+          <button type="button" aria-expanded="false">Можно ли начать одному?<span aria-hidden="true"></span></button>
+          <div class="acc-panel"><p>Да. Тариф «Старт» рассчитан на команду до пяти, им может пользоваться и один человек, пока не позовёт остальных.</p></div>
+        </div>
+        <div class="acc-item">
+          <button type="button" aria-expanded="false">Что будет с задачами, если не оплатить?<span aria-hidden="true"></span></button>
+          <div class="acc-panel"><p>14 дней пространство доступно только для чтения. Потом его можно выгрузить в таблицу. Удаляем данные через 60 дней после конца оплаты.</p></div>
+        </div>
+        <div class="acc-item">
+          <button type="button" aria-expanded="false">Есть ли приложение для телефона?<span aria-hidden="true"></span></button>
+          <div class="acc-panel"><p>Отдельного приложения нет. Мобильная версия сайта открывает список, срок и комментарий. Доску на телефоне мы специально не делали.</p></div>
+        </div>
+        <div class="acc-item">
+          <button type="button" aria-expanded="false">Где хранятся данные?<span aria-hidden="true"></span></button>
+          <div class="acc-panel"><p>На серверах в Москве. Резервная копия снимается раз в сутки. Для тарифа «Мастерская» можно включить выгрузку копии на ваш диск.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="trial">
+      <div class="reveal">
+        <p class="eyebrow">Пробный период</p>
+        <h2>14 дней на тарифе «Команда»</h2>
+        <p>Напишите рабочую почту. В этой демонстрации письмо не уходит: после проверки адреса вы увидите сообщение на странице.</p>
+      </div>
+      <form class="form reveal" id="trial-form" novalidate>
+        <div id="trial-fields">
+          <label class="field">
+            <span>Почта</span>
+            <input id="email" type="email" autocomplete="email" required placeholder="you@studio.ru">
+            <small class="error" id="email-error"></small>
+          </label>
+          <button class="btn btn-accent" type="submit">Попробовать бесплатно</button>
+        </div>
+        <p class="success" id="trial-success" hidden tabindex="-1"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="logo">Таскер</p>
+    <p>Учёт задач для малых команд. Екатеринбург, ул. Рабочая, 21. hello@tasker.team · +7 (343) 200-14-08</p>
+    <a href="#top">Наверх</a>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
